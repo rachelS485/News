@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * @author: Rachel Stinnett
+ * @file: fragment_webpage_view.xml
+ * @assignment: Programming Assignment 7- News Search
+ * @course: CSC 317; Spring 2022
+ * @description: This program creates an application that can be used to search
+ * for and browse through news articles. When application begins, the user is
+ * presented with a simple user interface, including the title of the application,
+ * a text field and search button, and then the remaining space can be used to
+ * display the search results. The user is able to complete one keyword searches
+ * to get articles related to that topic, browse through them, and even view the
+ * entire article on the original website. This program only has one Activity
+ * because fragments are utilized for majority of the UI functionality. In this
+ * fragment web page xml is where the website is displayed in the xml by using
+ * a web view. This xml only needs the single web view to achieve this.
+ */
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WebpageViewFragment">
+    <WebView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mainWebview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+    </WebView>
+</FrameLayout>

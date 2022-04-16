@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * @author: Rachel Stinnett
+ * @file: fragment_search.xml
+ * @assignment: Programming Assignment 7- News Search
+ * @course: CSC 317; Spring 2022
+ * @description: This program creates an application that can be used to search
+ * for and browse through news articles. When application begins, the user is
+ * presented with a simple user interface, including the title of the application,
+ * a text field and search button, and then the remaining space can be used to
+ * display the search results. The user is able to complete one keyword searches
+ * to get articles related to that topic, browse through them, and even view the
+ * entire article on the original website. This program only has one Activity
+ * because fragments are utilized for majority of the UI functionality. In
+ * fragment_search.xml This is where the layout is created for the search
+ * fragment. Within this layout there is a constraint layout to keep the
+ * elements aligned in an organized way. Then there is a text view for
+ * the program title. The EditView and the Button is for the search
+ * web bar and the search button to initialize the page to find the
+ * articles. Then this xml has a list view that is used to hold
+ * all of the article titles with the authors.
+ */
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mainBackground"
+        tools:context=".SearchFragment">
+
+        <TextView
+            android:id="@+id/mainTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:textSize="15pt"
+            android:textColor="@color/titleColor"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/enterSearch"
+            android:textSize="10pt"
+            android:textColor="@color/titleColor"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mainTitle"/>
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="85dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="3dp"
+            android:text="@string/buttonText"
+            android:textSize="5pt"
+            android:textColor="@color/titleColor"
+            android:backgroundTint="@color/buttonColor"
+            app:layout_constraintLeft_toRightOf="@id/editText"
+            app:layout_constraintTop_toBottomOf="@id/mainTitle"/>
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/mainBackground"
+            app:layout_constraintTop_toBottomOf="@id/editText"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

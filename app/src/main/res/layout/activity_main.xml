@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * @author: Rachel Stinnett
+ * @file: activity_main.xml
+ * @assignment: Programming Assignment 7- News Search
+ * @course: CSC 317; Spring 2022
+ * @description: This program creates an application that can be used to search
+ * for and browse through news articles. When application begins, the user is
+ * presented with a simple user interface, including the title of the application,
+ * a text field and search button, and then the remaining space can be used to
+ * display the search results. The user is able to complete one keyword searches
+ * to get articles related to that topic, browse through them, and even view the
+ * entire article on the original website. This program only has one Activity
+ * because fragments are utilized for majority of the UI functionality. In this
+ * activity main xml there are only two nested linear layouts since they are
+ * replaced with fragments. So it seems that nothing is actually done here
+ * or displayed since it is replaced in the fragments.
+ */
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/mainLayoutContainerOuter"
+    tools:context=".MainActivity">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:id="@+id/mainLayoutContainerInner"
+        tools:context=".MainActivity"/>
+</LinearLayout>

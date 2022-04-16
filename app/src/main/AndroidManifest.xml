@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * @author: Rachel Stinnett
+ * @file: AndroidManifest.xml
+ * @assignment: Programming Assignment 7- News Search
+ * @course: CSC 317; Spring 2022
+ * @description: This program creates an application that can be used to search
+ * for and browse through news articles. When application begins, the user is
+ * presented with a simple user interface, including the title of the application,
+ * a text field and search button, and then the remaining space can be used to
+ * display the search results. The user is able to complete one keyword searches
+ * to get articles related to that topic, browse through them, and even view the
+ * entire article on the original website. This program only has one Activity
+ * because fragments are utilized for majority of the UI functionality.
+ * This AndroidManifest.xml is the manifest file which describes essential information
+ * about the app to the Android build tools, the Android operating system, and Google Play.
+ */
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.news">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.News">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

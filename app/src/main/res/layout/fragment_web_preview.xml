@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * @author: Rachel Stinnett
+ * @file: fragment_web_preview.xml
+ * @assignment: Programming Assignment 7- News Search
+ * @course: CSC 317; Spring 2022
+ * @description: This program creates an application that can be used to search
+ * for and browse through news articles. When application begins, the user is
+ * presented with a simple user interface, including the title of the application,
+ * a text field and search button, and then the remaining space can be used to
+ * display the search results. The user is able to complete one keyword searches
+ * to get articles related to that topic, browse through them, and even view the
+ * entire article on the original website. This program only has one Activity
+ * because fragments are utilized for majority of the UI functionality. In this
+ * fragment web preview xml the elements that are used to portray the website
+ * title, the website content, and the read on button are created here for the
+ * Ui. This xml does this by using a constraint layout wight 2 text views , and
+ * a button. The associated java file handles the on click method for
+ * the button. And the text is set programmatically as well.
+ */
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WebPreviewFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mainBackground"
+        tools:context=".WebPreviewFragment">
+        <TextView
+            android:id="@+id/websiteTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/websiteTitle"
+            android:textSize="15pt"
+            android:textColor="@color/titleColor"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/websiteDescrip"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:text="@string/websiteDescription"
+            android:textSize="12pt"
+            android:textColor="@color/titleColor"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/websiteTitle" />
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="3dp"
+            android:text="@string/readOnButton"
+            android:textSize="12pt"
+            android:textColor="@color/titleColor"
+            android:backgroundTint="@color/buttonColor"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/websiteDescrip"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
